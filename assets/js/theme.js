@@ -13,131 +13,83 @@
 (function ($) {
 
     "use strict";
+    const $documentOn = $(document);
+    const $windowOn = $(window);
 
     $(document).ready(function () {
 
-        // ## Header Style and Scroll to Top
-        function headerStyle() {
-            if ($('.main-header').length) {
-                var windowpos = $(window).scrollTop();
-                var siteHeader = $('.main-header');
-                var scrollLink = $('.scroll-top');
-                if (windowpos >= 250) {
-                    siteHeader.addClass('fixed-header');
-                    scrollLink.fadeIn(300);
-                } else {
-                    siteHeader.removeClass('fixed-header');
-                    scrollLink.fadeOut(300);
-                }
+
+
+      //>> Mobile Menu Js Start <<//
+      $('#mobile-menu').meanmenu({
+        meanMenuContainer: '.mobile-menu',
+        meanScreenWidth: "1199",
+        meanExpand: ['<i class="far fa-plus"></i>'],
+    });
+
+
+
+        //>> Sidebar Toggle Js Start <<//
+            $(".offcanvas__close,.offcanvas__overlay").on("click", function() {
+                $(".offcanvas__info").removeClass("info-open");
+                $(".offcanvas__overlay").removeClass("overlay-open");
+            });
+            $(".sidebar__toggle").on("click", function() {
+                $(".offcanvas__info").addClass("info-open");
+                $(".offcanvas__overlay").addClass("overlay-open");
+            });
+
+        //>> Body Overlay Js Start <<//
+        $(".body-overlay").on("click", function() {
+                $(".offcanvas__area").removeClass("offcanvas-opened");
+                $(".df-search-area").removeClass("opened");;
+                $(".body-overlay").removeClass("opened");
+            });
+
+
+            
+        /* ================================
+        Back To Top Button Js Start
+        ================================ */
+
+        // Function to toggle back-to-top button visibility
+        function toggleBackTop() {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+                $("#back-top").addClass("show");
+            } else {
+                $("#back-top").removeClass("show");
             }
         }
-        headerStyle();
 
+        // On scroll
+        $windowOn.on('scroll', function() {
+            toggleBackTop();
+        });
 
-        // ## Dropdown menu
-        var mobileWidth = 992;
-        var navcollapse = $('.navigation li.dropdown');
+        // On document ready, force hide the button
+        $(document).ready(function() {
+            $("#back-top").removeClass("show");
+        });
 
-        navcollapse.on('mouseenter mouseleave', function () {
-            if ($(window).innerWidth() >= mobileWidth) {
-                $(this).children('ul').stop(true, false, true).slideToggle(300);
-                $(this).children('.megamenu').stop(true, false, true).slideToggle(300);
-            }
+        // On click
+        $documentOn.on('click', '#back-top', function() {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
         });
 
 
-        // ## Submenu Dropdown Toggle
-        if ($('.main-header .navigation li.dropdown ul').length) {
-            $('.main-header .navigation li.dropdown').append('<div class="dropdown-btn"><span class="far fa-angle-down"></span></div>');
+        //>> Sticky Header Js Start <<//
 
-            //Dropdown Button
-            $('.main-header .navigation li.dropdown .dropdown-btn').on('click', function () {
-                $(this).prev('ul').slideToggle(500);
-                $(this).prev('.megamenu').slideToggle(800);
-            });
-
-        }
-
-        //Submenu Dropdown Toggle
-        if ($('.main-header .main-menu').length) {
-            $('.main-header .main-menu .navbar-toggle').on('click', function () {
-                $(this).prev().prev().next().next().children('li.dropdown').hide();
-            });
-        }
-
-        // ## Scroll to Top
-        if ($('.scroll-to-target').length) {
-            $(".scroll-to-target").on('click', function () {
-                var target = $(this).attr('data-target');
-                // animate
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top
-                }, 1000);
-
-            });
-        }
-
-        // ## Menu Hidden Sidebar Content Toggle
-        if ($('.menu-sidebar').length) {
-            //Show Form
-            $('.menu-sidebar').on('click', function (e) {
-                e.preventDefault();
-                $('body').toggleClass('side-content-visible');
-            });
-            //Hide Form
-            $('.hidden-bar .inner-box .cross-icon,.form-back-drop,.close-menu').on('click', function (e) {
-                e.preventDefault();
-                $('body').removeClass('side-content-visible');
-            });
-            //Dropdown Menu
-            $('.fullscreen-menu .navigation li.dropdown > a').on('click', function () {
-                $(this).next('ul').slideToggle(500);
-            });
-        }
-
-
-        // ## Search Box
-        $('.nav-search > button').on('click', function () {
-            $('.nav-search form').toggleClass('hide');
-        });
-
-    });
-
-
-    /* ==========================================================================
-       When document is resize, do
-    ========================================================================== */
-
-    $(window).on('resize', function () {
-        var mobileWidth = 992;
-        var navcollapse = $('.navigation li.dropdown');
-        navcollapse.children('ul').hide();
-        navcollapse.children('.megamenu').hide();
-
-    });
-
-
-    $(window).on('scroll', function () {
-
-        // Header Style and Scroll to Top
-        function headerStyle() {
-            if ($('.main-header').length) {
-                var windowpos = $(window).scrollTop();
-                var siteHeader = $('.main-header');
-                var scrollLink = $('.scroll-top');
-                if (windowpos >= 100) {
-                    siteHeader.addClass('fixed-header');
-                    scrollLink.fadeIn(300);
-                } else {
-                    siteHeader.removeClass('fixed-header');
-                    scrollLink.fadeOut(300);
-                }
+        $windowOn.on("scroll", function () {
+            if ($(this).scrollTop() > 250) {
+            $("#header-sticky").addClass("sticky");
+            } else {
+            $("#header-sticky").removeClass("sticky");
             }
-        }
-
-        headerStyle();
+        }); 
 
     });
+
 
     /* ==========================================================================
        When document is loaded, do

@@ -89,12 +89,15 @@ class Roavio_Assets
 	{
 		wp_register_style('bootstrap', ROAVIO_VENDOR . '/bootstrap/bootstrap.min.css', [], '1.1.0');
 		wp_register_script('bootstrap', ROAVIO_VENDOR . '/bootstrap/bootstrap.min.js', ['jquery'], '1.1.0', true);
+		wp_register_style('meanmenu', ROAVIO_VENDOR . '/meanmenu/meanmenu.css', [], '2.0.8');
+		wp_register_script('meanmenu', ROAVIO_VENDOR . '/meanmenu/jquery.meanmenu.min.js', ['jquery'], '2.0.8', true);
 	}
 
 	public function enqueue_styles()
 	{
 		wp_enqueue_style('roavio-fonts', $this->google_font_url(), [], null);
 		wp_enqueue_style('bootstrap');
+		wp_enqueue_style('meanmenu');
 		wp_enqueue_style('fontawesome', ROAVIO_VENDOR . '/fontawesome/all.min.css', [], '5.14');
 		wp_enqueue_style('roavio-theme', ROAVIO_ASSETS . '/css/style.css', [], ROAVIO_VERSION);
 		wp_enqueue_style('roavio-style', get_stylesheet_uri(), [], ROAVIO_VERSION);
@@ -159,6 +162,7 @@ class Roavio_Assets
 	public function enqueue_scripts()
 	{
 		wp_enqueue_script('bootstrap');
+		wp_enqueue_script('meanmenu');
 		wp_enqueue_script('roavio-theme', ROAVIO_ASSETS . '/js/theme.js', ['jquery'], ROAVIO_VERSION, true);
 
 
