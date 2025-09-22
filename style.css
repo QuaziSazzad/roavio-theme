@@ -1408,6 +1408,46 @@ p.logged-in-as {
 
 /* end unit test */
 
+.list-items{
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    gap: 20px;
+    padding-bottom: 0;
+}
+
+.list {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text);
+    position: relative;
+    padding-left: 15px;
+    transition: all 0.4s ease-in-out;
+}
+.list a{
+    color: var(--text); 
+}
+
+.list-items .list::before {
+    position: absolute;
+    left: 0;
+    top: 11px;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--text);
+    transition: all 0.4s ease-in-out;
+}
+
+.news-card-items .news-content span::before{
+    position: relative;
+}
+
+.news-card-items .news-content span {
+    padding-left: 0;
+}
+
 .rating-item .star{
     display: inline-flex;
 }

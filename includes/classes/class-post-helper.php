@@ -36,19 +36,19 @@ class Roavio_Post_Helper
 		$author_id = get_post_field('post_author', get_the_ID());
 
 		if ('author' === $meta) : ?>
-			<li><i class="far fa-user"></i>
+			<li class="list">
 				<a href="<?php echo esc_url(get_author_posts_url($author_id)) ?>">
 					<?php echo esc_html(get_the_author_meta('display_name', $author_id)) ?>
 				</a>
 			</li>
 		<?php elseif ('date' === $meta) : ?>
-			<li><i class="far fa-calendar-alt"></i>
+			<li class="list">
 				<a href="<?php echo esc_url(get_the_permalink(get_the_ID())) ?>">
 					<?php echo esc_html(get_the_date()) ?>
 				</a>
 			</li>
 		<?php elseif ('comments' === $meta && ! post_password_required() && comments_open()) : ?>
-			<li><i class="far fa-comments"></i>
+			<li class="list">
 				<a href="<?php echo esc_url(esc_url(get_comments_link())) ?>" class="comments">
 					<span class="comment-text"><?php echo esc_html__('Comments ', 'roavio') ?></span>
 					<?php echo '(' . esc_html(get_comments_number()) . ')' ?>
@@ -76,7 +76,7 @@ class Roavio_Post_Helper
 		}
 		$enable_meta = $meta_items['enabled'] ? $meta_items['enabled'] : [];
 		?>
-		<ul class="blog-meta-two">
+		<ul class="list-items">
 			<?php foreach ($enable_meta as $key => $item) {
 				self::meta_item_markup($key);
 			} ?>
@@ -100,17 +100,22 @@ class Roavio_Post_Helper
 			return;
 		}
 	?>
-		<div class="next-prev-blog">
+		<div class="related-post-item">
 			<?php foreach ([$prev, $next] as $post) :
 				if (! empty($post)) : ?>
-					<div class="item" data-aos="<?php echo esc_attr($post === $prev ? 'fade-left' : 'fade-right'); ?>" data-aos-duration="1500" data-aos-offset="50">
+					<div class="recent-item">
 						<?php if (has_post_thumbnail($post->ID)) : ?>
-							<div class="image">
+							<div class="recent-thumb">
 								<?php echo get_the_post_thumbnail($post->ID, 'roavio_100x80'); ?>
 							</div>
 						<?php endif; ?>
-						<div class="content">
-							<h5><a href="<?php echo esc_url(get_permalink($post->ID)) ?>"><?php echo wp_kses_post(wp_trim_words(get_the_title($post->ID), '6', '...')); ?></a></h5>
+						<div class="recent-content">
+							<span><?php echo get_the_date('j F Y', $post->ID); ?></span>
+							<h5>
+								<a href="<?php echo esc_url(get_permalink($post->ID)) ?>">
+									<?php echo wp_kses_post(wp_trim_words(get_the_title($post->ID), '6', '...')); ?>
+								</a>
+							</h5>
 						</div>
 					</div>
 			<?php endif;
@@ -139,15 +144,13 @@ class Roavio_Post_Helper
 		$user_posts       = get_author_posts_url($user_id);
 		$user_avatar      = get_avatar($user_id, 130);
 	?>
-		<div class="admin-comment mb-50" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-			<div class="comment-body">
-				<div class="author-thumb">
-					<?php echo wp_kses_post($user_avatar); ?>
-				</div>
-				<div class="content">
-					<h5><?php echo esc_html($display_name); ?></h5>
-					<p><?php echo wpautop($user_description); ?></p>
-				</div>
+		<div class="client-info-box">
+			<div class="client-image">
+				<?php echo wp_kses_post($user_avatar); ?>
+			</div>
+			<div class="info-content">
+				<h5><?php echo esc_html($display_name); ?></h5>
+				<p><?php echo wpautop($user_description); ?></p>
 			</div>
 		</div>
 	<?php

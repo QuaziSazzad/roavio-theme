@@ -134,54 +134,22 @@ if (is_404()) {
 }
 
 ?>
-<?php if (is_singular('post')): ?>
-	<!-- Page Banner Start -->
-	<section class="page-banner-area blog-banner rel z-1">
-		<div class="container-fluid">
-			<div class="banner-wrap bgs-cover py-80" <?php if (!empty($breadcrumb_image['url'])) : ?> style="background-image: url(<?php echo esc_url($breadcrumb_image['url']); ?>);" <?php endif; ?>>
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-9">
-							<div class="banner-inner blog-style">
-								<nav aria-label="breadcrumb">
-									<?php Roavio_Breadcrumb::breadcrumb_init(); ?>
-								</nav>
-								<h1 class="page-title mt-25 rmt-15" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500" data-aos-offset="50"><?php echo implode('', $title_output); ?></h1>
-								<?php if ('yes' === $show_post_meta) : ?>
-									<div class="blog-meta-two mt-35 rmt-25" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500" data-aos-offset="50">
-										<?php Roavio_Post_Helper::render_post_meta(); ?>
-									</div>
-								<?php endif; ?>
-							</div>
-						</div>
-					</div>
-				</div>
+<!-- Hero Section Start -->
+<div class="breadcrumb-wrapper fix">
+	<div class="container">
+		<div class="page-heading">
+			<div class="breadcrumb-sub-title">
+				<h1 class="wow fadeInUp" data-wow-delay=".3s"><?php echo implode('', $title_output); ?></h1>
 			</div>
+			<nav class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s" aria-label="breadcrumb">
+				<?php
+				if (is_singular('post') && 'yes' === $show_post_meta) {
+					Roavio_Post_Helper::render_post_meta();
+				} elseif ('enabled' === $breadcrumb) {
+					Roavio_Breadcrumb::breadcrumb_init();
+				}
+				?>
+			</nav>
 		</div>
-	</section>
-	<!-- Page Banner End -->
-
-<?php else: ?>
-	<!-- Page Banner Start -->
-	<section class="page-banner-area blog-banner pt-30 rel z-1">
-		<div class="container-fluid">
-			<div class="banner-wrap bgs-cover py-80" <?php if (!empty($breadcrumb_image['url'])) : ?> style="background-image: url(<?php echo esc_url($breadcrumb_image['url']); ?>);" <?php endif; ?>>
-				<div class="container">
-					<div class="banner-inner">
-						<h1 class="page-title mb-20" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50"><?php echo implode('', $title_output); ?></h1>
-						<nav aria-label="breadcrumb">
-							<?php
-							if (is_singular('post') && 'yes' === $show_post_meta) {
-								Roavio_Post_Helper::render_post_meta();
-							} elseif ('enabled' === $breadcrumb) {
-								Roavio_Breadcrumb::breadcrumb_init();
-							}
-							?>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Page Banner End -->
-<?php endif;
+	</div>
+</div>

@@ -27,13 +27,14 @@ if (! has_post_thumbnail()) {
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
-	<div class="blog-standard-item" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
+	<div class="news-card-items mt-0">
 		<?php if (has_post_thumbnail()) : ?>
-			<div class="image">
+			<div class="news-image">
 				<?php Roavio_Post_Helper::render_media(); ?>
+				<span><?php the_date(); ?></span>
 			</div>
 		<?php endif; ?>
-		<div class="content">
+		<div class="news-content">
 			<?php
 			if ('product' !== get_post_type() && 'yes' === $show_meta) {
 				Roavio_Post_Helper::render_post_meta();
@@ -49,17 +50,14 @@ if (! has_post_thumbnail()) {
 					echo wpautop(wp_trim_words(get_the_content(), $excerpt_count, '...'));
 				}
 			}
-			?><?php if ('yes' === $show_button && ! empty($button_text)) {
-					if ('product' === get_post_type()) { ?>
-			<a href="<?php the_permalink(); ?>" class="blog-read-more" data-hover="<?php esc_attr_e('View Product', 'roavio'); ?>">
-				<span><?php esc_html_e('View Product', 'roavio'); ?></span>
-			</a>
-		<?php } else { ?>
-			<a href="<?php the_permalink(); ?>" class="blog-read-more" data-hover="<?php echo esc_attr($button_text); ?>">
-				<span><?php echo esc_html($button_text); ?></span>
-			</a>
-	<?php }
-				} ?>
+			?>
+			<?php if ('yes' === $show_button && ! empty($button_text)) {
+				if ('product' === get_post_type()) { ?>
+					<a href="<?php the_permalink(); ?>" class="link-btn"><?php esc_html_e('View Product', 'roavio'); ?><i class="fa-solid fa-chevron-right"></i></a>
+				<?php } else { ?>
+					<a href="<?php the_permalink(); ?>" class="link-btn"><?php echo esc_html($button_text); ?> <i class="fa-solid fa-chevron-right"></i></a>
+			<?php }
+			} ?>
 		</div>
 	</div>
 </article>
