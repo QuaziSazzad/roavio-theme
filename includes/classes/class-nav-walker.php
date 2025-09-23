@@ -73,6 +73,40 @@ class Roavio_Nav_Walker extends Walker_Nav_Menu
 		$output .= apply_filters('walker_nav_menu_start_el', $item_output, $menu_item, $depth, $args);
 	}
 
+	/**
+	 * Starts the sub-menu output.
+	 */
+	public function start_lvl(&$output, $depth = 0, $args = null)
+	{
+		$t      = isset($args->item_spacing) && 'discard' === $args->item_spacing ? '' : "\t";
+		$indent = str_repeat($t, $depth);
+
+		// Add submenu classes based on depth
+		$submenu_class = ($depth === 0) ? 'submenu' : 'submenu';
+
+		$output .= "\n$indent<ul class=\"$submenu_class\">\n";
+	}
+
+	/**
+	 * Ends the sub-menu output.
+	 */
+	public function end_lvl(&$output, $depth = 0, $args = null)
+	{
+		$t      = isset($args->item_spacing) && 'discard' === $args->item_spacing ? '' : "\t";
+		$indent = str_repeat($t, $depth);
+		$output .= "$indent</ul>\n";
+	}
+
+	/**
+	 * Ends the element output.
+	 */
+	public function end_el(&$output, $data_object, $depth = 0, $args = null)
+	{
+		$t      = isset($args->item_spacing) && 'discard' === $args->item_spacing ? '' : "\t";
+		$indent = ($depth) ? str_repeat($t, $depth) : '';
+		$output .= "$indent</li>\n";
+	}
+
 	protected function get_additional_classes($menu_item, $item_meta)
 	{
 		$additional_classes     = '';
@@ -124,7 +158,7 @@ class Roavio_Nav_Walker extends Walker_Nav_Menu
 		if ('font_icon' === $nav_icon_type && ! empty($font_icon)) {
 			$icon_html .= '<span class="' . esc_attr($icon_class) . '"';
 			if ($icon_color) {
-				$icon_html .= 'style="color: ' . esc_attr($icon_color) . '"';
+				$icon_html .= ' style="color: ' . esc_attr($icon_color) . '"';
 			}
 			$icon_html .= '>';
 			$icon_html .= '<i class="' . esc_attr($font_icon) . '"></i></span>';
@@ -144,7 +178,7 @@ class Roavio_Nav_Walker extends Walker_Nav_Menu
 		if ($badge) {
 			$badge_html .= '<span class="nav-badge"';
 			if ($badge_color) {
-				$badge_html .= 'style="--badge-color: ' . esc_attr($badge_color) . '"';
+				$badge_html .= ' style="--badge-color: ' . esc_attr($badge_color) . '"';
 			}
 			$badge_html .= '>';
 			$badge_html .= esc_html($badge);
@@ -157,7 +191,7 @@ class Roavio_Nav_Walker extends Walker_Nav_Menu
 	protected function get_submenu_indicator_html($menu_item, $classes)
 	{
 		if (in_array('menu-item-has-children', $classes) || $menu_item->object === 'roavio_template') {
-			return '<span class="submenu-toggler"></span>';
+			return '<i class="fa-solid fa-chevron-down"></i>';
 		}
 
 		return '';
@@ -173,13 +207,13 @@ class Roavio_Nav_Walker extends Walker_Nav_Menu
 		$menu_width   = $settings['mega_menu_width'] ?? 'full';
 		$custom_width = $settings['set_mega_menu_width'] ?? ['width' => ''];
 
-		$content = '<div class="sub-menu mega-menu-wrapper menu-width-' . esc_attr($menu_width) . '"';
+		$content = '<ul class="submenu mega-menu-wrapper menu-width-' . esc_attr($menu_width) . '"';
 		if ('custom' === $menu_width && ! empty($custom_width['width'])) {
 			$content .= ' style="width: ' . esc_attr($custom_width['width']) . 'px"';
 		}
 		$content .= '>';
-		$content .= Roavio_Helper::get_elementor_content($menu_item->object_id);
-		$content .= '</div>';
+		$content .= '<li>' . Roavio_Helper::get_elementor_content($menu_item->object_id) . '</li>';
+		$content .= '</ul>';
 
 		return $content;
 	}

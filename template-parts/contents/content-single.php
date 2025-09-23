@@ -16,10 +16,10 @@ $show_tag        = Helper::get_option('blog_details_tag', 'yes');
 $show_nav        = Helper::get_option('blog_details_nav', 'yes');
 $author_info     = Helper::get_option('blog_author_info', 'yes');
 $show_category   = Helper::get_option('blog_details_category', 'yes');
-$show_meta     = Helper::get_option('archive_post_meta', 'yes');
+$show_meta     = Helper::get_option('single_meta_items', 'yes');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry-post-details clearfix'); ?>>
-	<div class="news-details-post">
+	<div class="news-details-post blog-details-content">
 		<?php
 		if ('product' !== get_post_type() && 'yes' === $show_meta) {
 			Roavio_Post_Helper::render_post_meta();
@@ -43,14 +43,31 @@ $show_meta     = Helper::get_option('archive_post_meta', 'yes');
 			</div>
 			<?php if (('yes' === $show_tag && has_tag()) || ('yes' === $show_post_share && function_exists('roavio_post_share_links'))) : ?>
 				<div class="row tag-share-wrap">
-					<div class="col-xl-8 col-lg-7">
-						<div class="tagcloud">
-							<span><?php esc_html_e('Tags:', 'roavio'); ?></span>
-							<?php the_tags('', ''); ?>
+					<?php if ('yes' === $show_tag && has_tag()) : ?>
+						<div class="col-xl-6 col-lg-6">
+							<div class="tagcloud">
+								<span><?php esc_html_e('Tags:', 'roavio'); ?></span>
+								<?php the_tags('', ''); ?>
+							</div>
 						</div>
-					</div>
+					<?php endif; ?>
+					<?php if (has_category() && 'yes' === $show_category) {
+						$post_categories = get_the_category();
+						if ($post_categories && !is_wp_error($post_categories)) :
+					?>
+							<div class="col-xl-6 col-lg-6">
+								<div class="tagcloud category">
+									<span><?php esc_html_e('Posted in:', 'roavio'); ?></span>
+									<?php foreach ($post_categories as $cat) : ?>
+										<a href="<?php echo esc_url(get_tag_link($cat->term_id)); ?>" rel="tag"><?php echo esc_html($cat->name); ?></a>
+									<?php endforeach; ?>
+								</div>
+							</div>
+					<?php
+						endif;
+					} ?>
 					<?php if (function_exists('roavio_post_share_links')) : ?>
-						<div class="col-xl-4 col-lg-5">
+						<div class="col-xl-6 col-lg-6">
 							<div class="social-share">
 								<span><?php echo esc_html__('Share:', 'roavio'); ?></span>
 								<?php roavio_post_share_links(); ?>
