@@ -42,9 +42,9 @@ $show_meta     = Helper::get_option('single_meta_items', 'yes');
 				?>
 			</div>
 			<?php if (('yes' === $show_tag && has_tag()) || ('yes' === $show_post_share && function_exists('roavio_post_share_links'))) : ?>
-				<div class="row tag-share-wrap">
+				<div class="tag-share-wrap">
 					<?php if ('yes' === $show_tag && has_tag()) : ?>
-						<div class="col-xl-6 col-lg-6">
+						<div class="item">
 							<div class="tagcloud">
 								<span><?php esc_html_e('Tags:', 'roavio'); ?></span>
 								<?php the_tags('', ''); ?>
@@ -55,7 +55,7 @@ $show_meta     = Helper::get_option('single_meta_items', 'yes');
 						$post_categories = get_the_category();
 						if ($post_categories && !is_wp_error($post_categories)) :
 					?>
-							<div class="col-xl-6 col-lg-6">
+							<div class="item">
 								<div class="tagcloud category">
 									<span><?php esc_html_e('Posted in:', 'roavio'); ?></span>
 									<?php foreach ($post_categories as $cat) : ?>
@@ -67,7 +67,7 @@ $show_meta     = Helper::get_option('single_meta_items', 'yes');
 						endif;
 					} ?>
 					<?php if (function_exists('roavio_post_share_links')) : ?>
-						<div class="col-xl-6 col-lg-6">
+						<div class="item">
 							<div class="social-share">
 								<span><?php echo esc_html__('Share:', 'roavio'); ?></span>
 								<?php roavio_post_share_links(); ?>

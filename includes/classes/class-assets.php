@@ -40,19 +40,13 @@ class Roavio_Assets
 		$font_families = [];
 
 		$primary_font   = Roavio_Helper::get_option('primary_font', ['font-family' => '']);
-		$secondary_font = Roavio_Helper::get_option('secondary_font', ['font-family' => '']);
 
 		if ('' === $primary_font || (is_array($primary_font) && empty($primary_font['font-family']))) {
-			if ('off' !== _x('on', 'Inter', 'roavio')) {
-				$font_families[] = 'Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900';
+			if ('off' !== _x('on', 'Inter Tight', 'roavio')) {
+				$font_families[] = 'Inter+Tight:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i';
 			}
 		}
 
-		if ('' === $secondary_font || (is_array($secondary_font) && empty($secondary_font['font-family']))) {
-			if ('off' !== _x('on', 'Hanken Grotesk', 'roavio')) {
-				$font_families[] = 'Hanken Grotesk:ital,wght@0,100..900;1,100..900';
-			}
-		}
 
 		if (!empty($font_families)) {
 			// Build Google Fonts /css2 URL

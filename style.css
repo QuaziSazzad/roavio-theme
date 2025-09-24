@@ -21,13 +21,13 @@ Text Domain: roavio
     align-items: center;
     margin-left: -5px;
     margin-right: -5px;
+    margin-top: 60px;
 }
 
 .pagination li a,
 .pagination li span {
-    /* padding: 0 15px; */
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     -webkit-box-shadow: none;
     box-shadow: none;
     font-weight: 600;
@@ -53,13 +53,17 @@ Text Domain: roavio
 .pagination li span:not(.dots),
 .pagination li:hover:not(.disabled) a {
     color: #fff;
-    background: var(--roavio-heading-color);
-    border-color: var(--roavio-heading-color);
+    background: var(--theme);
+    border-color: var(--theme);
 }
 
 .pagination li a i,
 .pagination li .page-link i {
     margin-left: 0;
+}
+
+.pagination li{
+    margin-right: 10px;
 }
 
 .comment-list ul.children {
@@ -94,11 +98,27 @@ Text Domain: roavio
 }
 
 .widget_search .roavio-search-form input[type=search] {
-    border: 1px solid var(--roavio-border-color);
+    border: 1px solid rgba(21, 21, 21, 0.1);
     height: 60px;
+    width: 100%;
+    color: var(--text);
+    padding: 0 10px;
 }
 
+input:-internal-autofill-selected {
+ background:white !important;
+}
 
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+/* For other browsers */
+input[type="search"]::-ms-clear {
+    display: none;
+}
 
 .default-header .logo {
     padding: 20px 0;
@@ -1114,9 +1134,8 @@ big {
 .widget .sidebar__title,
 .sidebar .widget .title h2 {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: capitalize;
-    font-family: var(--roavio-heading-font);
     margin: 0;
     margin-top: -5px;
     margin-bottom: 29px;
@@ -1124,6 +1143,7 @@ big {
     line-height: 108.333%;
 }
 
+.widget .widget-title,
 .widget.widget_block h2 {
     margin-bottom: 20px;
     position: relative;
@@ -1220,7 +1240,7 @@ big {
 
 .wp-block-tag-cloud a,
 .tagcloud a {
-    font-size: 14px !important;
+    font-size: 16px !important;
     text-transform: capitalize;
     line-height: 1;
     font-weight: 400;
@@ -1229,8 +1249,9 @@ big {
     transition: .3s;
     color: var(--roavio-base-color);
     background-color: transparent;
-    border: 1px solid var(--roavio-border-color);
+    border: 1px solid rgba(21, 21, 21, 0.1);
     border-radius: 0;
+    border-radius: 5px
 }
 
 .wp-block-tag-cloud,
@@ -1272,7 +1293,6 @@ big {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    font-family: var(--roavio-heading-font);
     color: var(--roavio-heading-color);
     text-transform: capitalize;
 }
@@ -1400,6 +1420,24 @@ p.logged-in-as {
 
 /* end unit test */
 
+.tag-share-wrap{
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.tag-share-wrap .item {
+    margin-bottom: 20px;
+}
+
 .widget img {
     height: auto;
 }
@@ -1409,9 +1447,7 @@ img {
     display: inline-block;
 }
 
-.tagcloud.category {
-    justify-content: flex-end;
-}
+
 
 @media (max-width: 991px) {
     .tagcloud.category {
@@ -1447,6 +1483,7 @@ img {
 }
 .list a{
     color: var(--text); 
+    font-weight: 500;
 }
 
 .list-items .list::before {
@@ -1467,6 +1504,18 @@ img {
 
 .news-card-items .news-content span {
     padding-left: 0;
+}
+
+.blog-standard-page .news-content p{
+    margin-bottom: 16px;
+}
+
+.news-card-items {
+    margin-bottom: 30px;
+}
+
+.news-card-items .news-content{
+    margin-top: 0;
 }
 
 .rating-item .star{
@@ -1577,3 +1626,5 @@ img {
   .tour-place-item .tour-place-image .icon:hover i{
     color: var(--white);
   }
+
+

@@ -65,17 +65,19 @@ if (! class_exists('Roavio_Comment_Walker')) {
             $GLOBALS['comment'] = $comment;
             ?>
             <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
-                <div class="comment-body" id="comment-<?php comment_ID(); ?>" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                    <div class="author-thumb">
+                <div class="comment-item" id="comment-<?php comment_ID(); ?>">
+                    <div class="comment-image">
                         <?php echo get_avatar($comment->comment_author_email, 80); ?>
                     </div>
                     <div class="content">
-                        <h6> <?php printf('%s', get_comment_author_link()); ?></h6>
-                        <span class="date"><i class="far fa-calendar-alt"></i><?php printf('%1$s', get_comment_date()); ?></span>
+                        <h6><?php printf('%s', get_comment_author_link()); ?></h6>
+                        <span><i class="far fa-calendar-alt"></i> <?php printf('%1$s', get_comment_date()); ?></span>
                         <?php if ($comment->comment_approved == '0'): ?>
                             <p><?php esc_html_e('Your comment is awaiting moderation.', 'roavio'); ?></p>
                         <?php endif; ?>
-                        <p><?php comment_text(); ?></p>
+                        <p>
+                            <?php comment_text(); ?>
+                        </p>
                         <?php
                         comment_reply_link(array_merge($args, [
                             'depth'      => $depth,
