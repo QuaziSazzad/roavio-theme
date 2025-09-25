@@ -41,7 +41,7 @@ $show_meta     = Helper::get_option('single_meta_items', 'yes');
 				));
 				?>
 			</div>
-			<?php if (('yes' === $show_tag && has_tag()) || ('yes' === $show_post_share && function_exists('roavio_post_share_links'))) : ?>
+			<?php if (('yes' === $show_tag && has_tag()) || ('yes' === $show_post_share && function_exists('roavio_post_share_links')) || 'yes' === $show_category) : ?>
 				<div class="tag-share-wrap">
 					<?php if ('yes' === $show_tag && has_tag()) : ?>
 						<div class="item">
