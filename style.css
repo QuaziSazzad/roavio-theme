@@ -121,20 +121,20 @@ input[type="search"]::-ms-clear {
     padding: 20px 0;
 }
 
-.sticky .content {
+.sticky .news-content {
     position: relative;
 }
 
-.sticky .content::before {
+.sticky .news-content::before {
     position: absolute;
     right: 0px;
     content: "";
     width: 40px;
     height: 40px;
-    background-color: var(--roavio-primary-color);
+    background-color: var(--theme);
     z-index: 10;
     clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 50%, 0 100%, 0 0);
-    top: 0px;
+    top: 7px;
 }
 
 .blog-details-content ul,
@@ -238,7 +238,7 @@ ul.wp-block-page-list {
     appearance: none;
     border: none;
     outline: none !important;
-    background-color: var(--roavio-primary-color);
+    background-color: var(--theme);
     color: #fff;
     font-size: 16px;
     font-weight: 700;
@@ -293,7 +293,7 @@ p.form-submit {
 
 .wp-block-categories-list li a:hover,
 .wp-block-archives-list li a:hover {
-    color: var(--roavio-primary-color);
+    color: var(--theme);
 }
 
 .blog-details-content ul.wp-block-social-links,
@@ -368,7 +368,7 @@ ul.wp-block-rss.wp-block-rss {
 .blog-details-content a:hover,
 .comment-content a:hover,
 .blog-details-content blockquote:not([class*=has-]) cite:hover {
-    color: var(--roavio-primary-color);
+    color: var(--theme);
 }
 
 .blog-details-content .project-tags a:hover {
@@ -427,7 +427,7 @@ ul.wp-block-rss.wp-block-rss {
 .blog-details-content .wp-block-search .wp-block-search__button:hover,
 .sidebar .widget .wp-block-search .wp-block-search__button:hover,
 .sidebar__single .wp-block-search .wp-block-search__button:hover {
-    background-color: var(--roavio-primary-color, #AE8F62);
+    background-color: var(--theme, #AE8F62);
     color: #fff;
     fill: #fff;
 }
@@ -452,7 +452,7 @@ ul.wp-block-rss.wp-block-rss {
 .wp-block-tag-cloud a:hover,
 .tagcloud a:hover {
     color: #fff;
-    background-color: var(--roavio-primary-color);
+    background-color: var(--theme);
 }
 
 .wp-block-tag-cloud a {
@@ -464,12 +464,12 @@ ul.wp-block-rss.wp-block-rss {
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):hover {
-    border-color: var(--roavio-primary-color);
+    border-color: var(--theme);
     color: #fff;
 }
 
 .wp-block-buttons .wp-block-button__link:hover {
-    background-color: var(--roavio-primary-color);
+    background-color: var(--theme);
     color: #fff;
 }
 
@@ -513,7 +513,7 @@ ul.wp-block-rss.wp-block-rss {
 }
 
 .blog-details-content .page-links a:hover {
-    background-color: var(--roavio-primary-color);
+    background-color: var(--theme);
     color: #fff;
     border: none;
 }
@@ -531,7 +531,7 @@ ul.wp-block-rss.wp-block-rss {
 }
 
 .wp-block-file__button {
-    background: var(--roavio-primary-color);
+    background: var(--theme);
     color: #fff !important;
     text-decoration: none;
     padding: 6px 20px;
@@ -572,7 +572,7 @@ ul.wp-block-rss.wp-block-rss {
     bottom: 0;
     transform: rotate(180deg);
     font-size: 100px;
-    color: var(--roavio-primary-color);
+    color: var(--theme);
     opacity: 0.4;
     right: 30px;
     line-height: .9em;
@@ -603,8 +603,8 @@ pre {
 }
 
 .blog-details-content .wp-block-button a:hover {
-    background-color: var(--roavio-primary-color);
-    border-color: var(--roavio-primary-color);
+    background-color: var(--theme);
+    border-color: var(--theme);
     color: var(--header, #141414);
 }
 
@@ -677,7 +677,7 @@ pre {
 .blog-details-content .post-password-form input[type=submit] {
     width: 120px;
     height: 60px;
-    background-color: var(--roavio-primary-color, #1e1e22);
+    background-color: var(--theme, #1e1e22);
     color: #fff;
     padding: 0;
     text-align: center;
@@ -779,7 +779,7 @@ pre {
 }
 
 .wp-block-latest-comment:not(.has-avatar):not(.has-dates) li:hover::before {
-    background-color: var(--roavio-primary-color);
+    background-color: var(--theme);
     color: #fff;
 }
 
@@ -852,8 +852,8 @@ pre {
 
 
 .blog-details-content .wp-block-button a:hover {
-    background-color: var(--roavio-primary-color);
-    border-color: var(--roavio-primary-color);
+    background-color: var(--theme);
+    border-color: var(--theme);
     color: #fff;
 }
 
@@ -1179,7 +1179,7 @@ big {
     width: 45px;
     border-radius: 50%;
     font-size: 15px;
-    color: var(--roavio-white, #1c1a1d);
+    color: var(--text, #1c1a1d);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1197,12 +1197,12 @@ big {
 .sidebar .widget.widget_recent_comment ul li:hover::before,
 .sidebar__single.widget_recent_entries ul li:hover::before,
 .sidebar__single.widget_recent_comment ul li:hover::before {
-    background-color: var(--roavio-primary-color, #c2a74e);
+    background-color: var(--theme, #c2a74e);
     color: #ffffff;
 }
 
 .sidebar .widget_rss .rss-widget-title:hover {
-    color: var(--roavio-primary-color);
+    color: var(--theme);
 }
 
 .sidebar .widget .wp-block-latest-comment .wp-block-latest-comment__comment-meta {
@@ -1222,7 +1222,7 @@ big {
 }
 
 .sidebar__single .calendar_wrap .wp-calendar-table thead {
-    background-color: var(--roavio-primary-color);
+    background-color: var(--theme);
 }
 
 .sidebar__single .calendar_wrap .wp-calendar-table thead th {
@@ -1418,6 +1418,28 @@ p.logged-in-as {
 
 /* end unit test */
 
+.news-details-post .list-items{
+    margin-top: -5px;
+}
+
+.news-details-post .news-details-content .comment-area h3.comments-title {
+    margin-bottom: 40px;
+}
+
+.news-details-post .news-details-content .related-post-item {
+    flex-wrap: wrap;
+}
+
+.news-details-post .news-details-content .related-post-item .recent-item {
+    max-width: 400px;
+}
+.news-details-post .news-details-content .related-post-item .recent-item .recent-content{
+-ms-word-wrap: break-word;
+    word-wrap: break-word;
+    display: block;
+    max-width: 100%;
+}
+
 .wp-block-latest-posts.wp-block-latest-posts__list,
  ol.wp-block-latest-comments,
   ul.wp-block-rss.wp-block-rss {
@@ -1539,7 +1561,7 @@ img {
     gap: 20px;
     padding-bottom: 0;
     padding-top: 0;
-    margin-top: -10px;
+    margin-top: -12px;
 }
 
 .list {
@@ -1580,7 +1602,7 @@ img {
 }
 
 .news-card-items {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .news-card-items .news-content{
@@ -1693,7 +1715,77 @@ img {
   }
 
   .tour-place-item .tour-place-image .icon:hover i{
-    color: var(--white);
+    color: var(--text);
   }
 
 
+/*======= Input Styles =======*/
+input,
+select,
+textarea,
+.nice-select,
+.form-control {
+  width: 100%;
+  height: auto;
+  font-weight: 500;
+  border-radius: 0;
+  padding: 12px 20px;
+  background-color: #fff;
+  border: 1px solid var(--border);
+
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.nice-select:focus,
+.form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: var(--border);
+}
+
+input:focus::-webkit-input-placeholder,
+select:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+.nice-select:focus::-webkit-input-placeholder,
+.form-control:focus::-webkit-input-placeholder {
+  color: var(--header);
+}
+
+input:focus:-ms-input-placeholder,
+select:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder,
+.nice-select:focus:-ms-input-placeholder,
+.form-control:focus:-ms-input-placeholder {
+  color: var(--header);
+}
+
+input:focus::-ms-input-placeholder,
+select:focus::-ms-input-placeholder,
+textarea:focus::-ms-input-placeholder,
+.nice-select:focus::-ms-input-placeholder,
+.form-control:focus::-ms-input-placeholder {
+  color: var(--header);
+}
+
+input:focus::placeholder,
+select:focus::placeholder,
+textarea:focus::placeholder,
+.nice-select:focus::placeholder,
+.form-control:focus::placeholder {
+  color: var(--header);
+}
+
+input {
+    color: var(--text);
+  }
+
+  .widget.widget_rss li{
+    margin-bottom: 20px;
+  }
+
+  .widget.widget_rss li .rssSummary{
+    margin-top: 10px;
+  }
