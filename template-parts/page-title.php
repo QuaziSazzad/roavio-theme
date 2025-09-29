@@ -145,6 +145,8 @@ if (is_404()) {
 				<?php
 				if (is_singular('post') && 'yes' === $show_post_meta) {
 					Roavio_Post_Helper::render_post_meta();
+				} elseif ('enabled' === $breadcrumb && is_page()) {
+					Roavio_Post_Helper::render_post_meta();
 				} elseif ('enabled' === $breadcrumb) {
 					Roavio_Breadcrumb::breadcrumb_init();
 				}

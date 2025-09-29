@@ -1263,7 +1263,9 @@ big {
 
 .roavio-search-form {
     position: relative;
+    margin-top: 10px;
 }
+
 
 .roavio-search-form button[type=submit] {
     background-color: transparent;
@@ -1304,6 +1306,7 @@ big {
 
 .widget .wp-block-latest-posts__list li a {
     line-height: 30px;
+    margin-bottom: 10px;
 }
 
 
@@ -1549,10 +1552,6 @@ img {
     margin-bottom: 50px;
 }
 
-.blog-sidebar{
-    margin-bottom: 100px;
-}
-
 
 .list-items{
     display: flex;
@@ -1573,7 +1572,7 @@ img {
     transition: all 0.4s ease-in-out;
 }
 .list a{
-    color: var(--text); 
+    color: var(--header); 
     font-weight: 500;
 }
 
@@ -1789,3 +1788,19 @@ input {
   .widget.widget_rss li .rssSummary{
     margin-top: 10px;
   }
+
+  .breadcrumb-wrapper .page-heading {
+    padding: 100px 0 100px;
+}
+
+.breadcrumb-wrapper .page-heading .breadcrumb-items li:not(:first-child) a{
+    color: var(--theme);
+}
+
+.breadcrumb-wrapper .list-items .list:first-child::before {
+    position: relative;
+}
+
+.page .breadcrumb-wrapper .page-heading .breadcrumb-items {
+    margin-top: 25px;
+}

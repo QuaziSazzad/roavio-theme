@@ -18,7 +18,7 @@ use RoavioTheme\Classes\Roavio_Helper as Helper;
 get_header();
 ?>
 <!-- Blog List Area start -->
-<section class="blog-details-page pt-130 rpy-100 pb-110 rel z-1">
+<section class="blog-details-page section-padding pt-0">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
