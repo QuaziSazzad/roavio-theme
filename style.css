@@ -1804,3 +1804,486 @@ input {
 .page .breadcrumb-wrapper .page-heading .breadcrumb-items {
     margin-top: 25px;
 }
+
+ .price-ranger .ranger-min-max-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 0 0 0;
+}
+
+
+.price-ranger .ranger-min-max-block input[type=text] {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    line-height: 30px;
+    border: none;
+    outline: none;
+    padding: 0;
+    color: var(--header);
+    background-color: transparent;
+}
+ .price-ranger .ranger-min-max-block input[type=text].max {
+    text-align: right;
+}
+
+.right-item .sort.short-select{
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-radius: 22px;
+    border: 1px solid rgba(21, 21, 21, 0.1);
+    background: #F9F9F9;
+    width: initial;
+    color: var(--header);
+    width: 204px;
+    height: initial !important;
+    line-height: initial !important;
+}
+.no-properties-found{
+    margin-top: 60px;
+}
+
+/* booking form style */
+#widget-babe-booking-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#booking_form_block {
+    background: white;
+    border-radius: 0;
+    padding: 40px 24px;
+    box-shadow: none;
+}
+
+#booking_form {
+    width: 100%;
+}
+
+/* Title */
+#booking_form::before {
+    content: 'Tour Booking';
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 32px;
+}
+
+.input_group {
+    margin-bottom: 0;
+}
+
+.booking-form-block {
+    margin-bottom: 32px;
+}
+
+.booking_form_input_label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.booking_form_step_num {
+    display: none;
+}
+
+/* Date Input */
+.booking-date {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.booking-date i {
+    display: none;
+}
+
+.booking_date.hasDatepicker {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #fafafa;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.booking_date.hasDatepicker:focus {
+    outline: none;
+    border-color: #ddd;
+    background: white;
+}
+
+/* Time Selection */
+.booking-time-block {
+    margin-bottom: 0 !important;
+}
+
+.booking-time-block .booking_form_input_label {
+    margin-bottom: 16px;
+}
+
+.booking-hourly-time-cloud {
+    margin-top: 0;
+}
+
+.input_select_cloud {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cloud_term_item {
+    flex: 0 0 auto;
+    min-width: 80px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    color: #666;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cloud_term_item::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background: white;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.cloud_term_item:hover::before {
+    border-color: #ff6347;
+}
+
+.cloud_term_item.term_item_selected::before,
+.cloud_term_item.term_item_selected_from::before {
+    background: #ff6347;
+    border-color: #ff6347;
+    box-shadow: inset 0 0 0 4px white;
+}
+
+.cloud_term_item.term_item_selected,
+.cloud_term_item.term_item_selected_from {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Tickets Section */
+.booking-form-block:has(+ .booking-form-block .booking-services-block)::after {
+    content: 'Tickets';
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 32px;
+    margin-bottom: 20px;
+}
+
+/* Hide Time To section - simulating the design */
+.booking-form-block:nth-child(3) {
+    display: none;
+}
+
+/* Ticket Rows - Create with pseudo elements since markup doesn't have this */
+.booking-services-block::before {
+    content: '';
+    display: block;
+    margin-bottom: 16px;
+}
+
+
+#list_services {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.list_service {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list_service:hover {
+    border: none;
+    background: transparent;
+}
+
+.list_service_title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 0;
+}
+
+.list_service_prices .service_price_line label{
+    color:var(--roavio-text);
+}
+
+.list_service_title label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex: 1;
+    margin: 0;
+}
+
+.list_service_title input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    cursor: pointer;
+    appearance: none;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    padding: 0;
+}
+
+.list_service_title input[type="checkbox"]:checked {
+    background: white;
+    border-color: #ddd;
+}
+
+.list_service_title input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #ff6347;
+    border-radius: 50%;
+}
+
+.list_service_title h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #455151;
+    margin: 0;
+}
+
+.list_service_title label {
+    font-weight: 500;
+}
+
+.list_service_prices {
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+.service_price_line {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+}
+
+.service_price_line label {
+    display: none;
+}
+
+.currency_amount {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.currency_symbol {
+    margin-right: 0;
+}
+
+.view-list-details {
+    display: none;
+}
+
+/* Total Section */
+#total_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+#total_group .booking_form_input_label {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+}
+
+#booking_form_total {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+}
+
+#booking_form_total .currency_amount {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Error Section */
+#error_group {
+    display: none;
+    margin-bottom: 16px;
+}
+
+#error_group.show {
+    display: block;
+}
+
+.booking_form_error_label {
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Submit Button */
+.submit_group {
+    margin-top: 0;
+}
+
+.booking_form_submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--theme);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.booking_form_submit:hover {
+    background: var(--header);
+    color: var(--white);
+    transform: translateY(-1px);
+}
+
+.booking_form_submit:active {
+    transform: translateY(0);
+}
+
+.booking_form_submit i {
+    display: none;
+}
+
+/* Hidden inputs */
+input[type="hidden"] {
+    display: none;
+}
+
+/* Add ticket rows using CSS - simulating the design */
+.booking-services-block::before {
+    content: '18+ Years: $168 01 18- Years: $100 01';
+    display: block;
+    font-size: 0;
+    margin-bottom: 0;
+}
+
+.booking-services-block::before {
+    content: '';
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Create ticket rows with additional styling */
+.booking-time-block:last-of-type::after {
+    content: '';
+    display: block;
+    margin-top: 32px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    #booking_form_block {
+        padding: 32px 20px;
+    }
+}
+
+#booking_form_block .input_select_cloud .cloud_term_item.term_item_available{
+    border:none;
+}
+
+#booking_form_block .input_select_field_booking_time_from.input_select_cloud .cloud_term_item.term_item_selected{
+    background:transparent;
+    color:var(--heading-color);
+}
+
+.booking-form-block {
+    border-bottom: 1px solid rgba(21, 20, 21, 0.09);
+}
+
+.ui-datepicker table {
+    background:#fff;
+}
+
+.elementor .details-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+ul.list{
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.feature-memories-wrapper .feature-memories-right .list-box-item .award-box {
+    max-width: 220px;
+}
+
+.footer-widget-wrapper {
+    padding-bottom: 80px;
+}
+
+@media (max-width: 1399px) {
+    .destination-details-wrapper .best-tourist-box {
+        height: 400px;
+    }
+}
