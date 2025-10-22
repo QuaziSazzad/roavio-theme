@@ -129,10 +129,9 @@ $show_post_meta = Helper::get_option('blog_details_meta', 'yes');
 
 $breadcrumb_image      = Helper::get_option('breadcrumb_image');
 
-if (is_404()) {
+if (is_404() || (is_tax('ba_location'))) {
 	return;
 }
-
 ?>
 <!-- Hero Section Start -->
 <div class="breadcrumb-wrapper fix">

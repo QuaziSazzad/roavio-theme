@@ -2287,3 +2287,13 @@ ul.list{
         height: 400px;
     }
 }
+
+.swiper-dot-3 .swiper-pagination-bullet:not(:last-child) {
+    margin-top: 10px !important;
+}
+
+.swiper-dot-style .swiper-pagination-bullet:not(:last-child),
+.swiper-dot .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 14px !important;
+}
+
