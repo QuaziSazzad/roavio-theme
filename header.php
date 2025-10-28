@@ -26,6 +26,9 @@ use RoavioTheme\Classes\Roavio_Helper as Helper;
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
+	<!-- MouseCursor Start -->
+	<div class="mouseCursor cursor-outer"></div>
+	<div class="mouseCursor cursor-inner"></div>
 	<div id="roavio-page" class="roavio-body-content">
 		<?php
 		if ('enabled' === Helper::get_option('site_preloader', 'enabled')) {

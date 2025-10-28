@@ -1421,6 +1421,11 @@ p.logged-in-as {
 
 /* end unit test */
 
+.roavio-boxed-layout .roavio-body-content {
+    margin: 0 auto;
+    max-width: var(--roavio-boxed-width) !important;
+}
+
 .news-details-post .list-items{
     margin-top: -5px;
 }

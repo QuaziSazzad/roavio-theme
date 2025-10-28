@@ -251,55 +251,69 @@ class Roavio_Helper
 	{
 		$colors = [];
 
-		// Light
-		$primary_color   = self::get_option('primary_color', '');
-		$secondary_color = self::get_option('secondary_color', '');
-		$blue_color = self::get_option('blue_color', '');
-		$body_color      = self::get_option('body_color', '');
-		$heading_color   = self::get_option('heading_color', '');
-		$gray_color      = self::get_option('gray_color', '');
-		$light_neutral   = self::get_option('light_neutral', '');
+		// Get theme colors from Redux options
+		$theme_color    = self::get_option('theme_color', '');
+		$theme_2_color  = self::get_option('theme_2_color', '');
+		$header_color   = self::get_option('header_color', '');
+		$text_color     = self::get_option('text_color', '');
+		$border_color   = self::get_option('border_color', '');
+		$bg_color       = self::get_option('bg_color', '');
+		$bg_2_color     = self::get_option('bg_2_color', '');
+		$black_color    = self::get_option('black_color', '');
+		$white_color    = self::get_option('white_color', '');
 
-		$colors['_primary'] = [
-			'slug'  => 'roavio-primary-color',
-			'title' => esc_html__('Primary', 'roavio'),
-			'value' => ! empty($primary_color) ? $primary_color : '#FC5546',
+		$colors['_theme'] = [
+			'slug'  => 'theme',
+			'title' => esc_html__('Theme', 'roavio'),
+			'value' => ! empty($theme_color) ? $theme_color : '#FB5B32',
 		];
 
-		$colors['_secondary'] = [
-			'slug'  => 'roavio-secondary-color',
-			'title' => esc_html__('Secondary', 'roavio'),
-			'value' => ! empty($secondary_color) ? $secondary_color : '#021433',
+		$colors['_theme_2'] = [
+			'slug'  => 'theme-2',
+			'title' => esc_html__('Theme 2', 'roavio'),
+			'value' => ! empty($theme_2_color) ? $theme_2_color : '#63AB45',
 		];
 
-		$colors['_blue'] = [
-			'slug'  => 'roavio-blue-color',
-			'title' => esc_html__('Blue', 'roavio'),
-			'value' => ! empty($blue_color) ? $secondary_color : '#021433',
+		$colors['_header'] = [
+			'slug'  => 'header',
+			'title' => esc_html__('Header', 'roavio'),
+			'value' => ! empty($header_color) ? $header_color : '#151515',
 		];
 
-		$colors['_body'] = [
-			'slug'  => 'roavio-body-color',
-			'title' => esc_html__('Body', 'roavio'),
-			'value' => ! empty($body_color) ? $body_color : '#5B5B5B',
+		$colors['_text'] = [
+			'slug'  => 'text',
+			'title' => esc_html__('Text', 'roavio'),
+			'value' => ! empty($text_color) ? $text_color : '#696969',
 		];
 
-		$colors['_heading'] = [
-			'slug'  => 'roavio-heading-color',
-			'title' => esc_html__('Headline', 'roavio'),
-			'value' => ! empty($heading_color) ? $heading_color : '#0B0C0C',
+		$colors['_border'] = [
+			'slug'  => 'border',
+			'title' => esc_html__('Border', 'roavio'),
+			'value' => ! empty($border_color) ? $border_color : '#C9C9C9',
 		];
 
-		$colors['_gray'] = [
-			'slug'  => 'roavio-gray-color',
-			'title' => esc_html__('Gray', 'roavio'),
-			'value' => ! empty($gray_color) ? $gray_color : '#F3F6F9',
+		$colors['_bg'] = [
+			'slug'  => 'bg',
+			'title' => esc_html__('Background', 'roavio'),
+			'value' => ! empty($bg_color) ? $bg_color : '#F7F7F7',
 		];
 
-		$colors['_light'] = [
-			'slug'  => 'roavio-light-neutral',
-			'title' => esc_html__('Light', 'roavio'),
-			'value' => ! empty($light_neutral) ? $light_neutral : '#F3F6F9',
+		$colors['_bg_2'] = [
+			'slug'  => 'bg-2',
+			'title' => esc_html__('Background 2', 'roavio'),
+			'value' => ! empty($bg_2_color) ? $bg_2_color : '#EDF2DE',
+		];
+
+		$colors['_black'] = [
+			'slug'  => 'black',
+			'title' => esc_html__('Black', 'roavio'),
+			'value' => ! empty($black_color) ? $black_color : '#000',
+		];
+
+		$colors['_white'] = [
+			'slug'  => 'roavio-white',
+			'title' => esc_html__('White', 'roavio'),
+			'value' => ! empty($white_color) ? $white_color : '#fff',
 		];
 
 		return $colors;
@@ -318,54 +332,68 @@ class Roavio_Helper
 			return $colors;
 		}
 
-		$primary_color   = self::get_meta('roavio_page_meta', 'primary_color', '');
-		$secondary_color = self::get_meta('roavio_page_meta', 'secondary_color', '');
-		$blue_color = self::get_meta('roavio_page_meta', 'blue_color', '');
-		$body_color      = self::get_meta('roavio_page_meta', 'body_color', '');
-		$heading_color   = self::get_meta('roavio_page_meta', 'heading_color', '');
-		$gray_color      = self::get_meta('roavio_page_meta', 'gray_color', '');
-		$light_neutral   = self::get_meta('roavio_page_meta', 'light_neutral', '');
+		$theme_color   = self::get_meta('roavio_page_meta', 'theme_color', '');
+		$theme_2_color = self::get_meta('roavio_page_meta', 'theme_2_color', '');
+		$header_color  = self::get_meta('roavio_page_meta', 'header_color', '');
+		$text_color    = self::get_meta('roavio_page_meta', 'text_color', '');
+		$border_color  = self::get_meta('roavio_page_meta', 'border_color', '');
+		$bg_color      = self::get_meta('roavio_page_meta', 'bg_color', '');
+		$bg_2_color    = self::get_meta('roavio_page_meta', 'bg_2_color', '');
+		$black_color   = self::get_meta('roavio_page_meta', 'black_color', '');
+		$white_color   = self::get_meta('roavio_page_meta', 'white_color', '');
 
-		$colors['_primary'] = [
-			'slug'  => 'roavio-primary-color',
-			'title' => esc_html__('Primary', 'roavio'),
-			'value' => ! empty($primary_color) ? $primary_color : '#FC5546',
+		$colors['_theme'] = [
+			'slug'  => 'theme',
+			'title' => esc_html__('Theme', 'roavio'),
+			'value' => ! empty($theme_color) ? $theme_color : '#FB5B32',
 		];
 
-		$colors['_secondary'] = [
-			'slug'  => 'roavio-secondary-color',
-			'title' => esc_html__('Secondary', 'roavio'),
-			'value' => ! empty($secondary_color) ? $secondary_color : '#021433',
+		$colors['_theme_2'] = [
+			'slug'  => 'theme-2',
+			'title' => esc_html__('Theme 2', 'roavio'),
+			'value' => ! empty($theme_2_color) ? $theme_2_color : '#63AB45',
 		];
 
-		$colors['_blue'] = [
-			'slug'  => 'roavio-blue-color',
-			'title' => esc_html__('blue', 'roavio'),
-			'value' => ! empty($blue_color) ? $blue_color : '#021433',
+		$colors['_header'] = [
+			'slug'  => 'header',
+			'title' => esc_html__('Header', 'roavio'),
+			'value' => ! empty($header_color) ? $header_color : '#151515',
 		];
 
-		$colors['_body'] = [
-			'slug'  => 'roavio-body-color',
-			'title' => esc_html__('Body', 'roavio'),
-			'value' => ! empty($body_color) ? $body_color : '#5B5B5B',
+		$colors['_text'] = [
+			'slug'  => 'text',
+			'title' => esc_html__('Text', 'roavio'),
+			'value' => ! empty($text_color) ? $text_color : '#696969',
 		];
 
-		$colors['_heading'] = [
-			'slug'  => 'roavio-heading-color',
-			'title' => esc_html__('Headline', 'roavio'),
-			'value' => ! empty($heading_color) ? $heading_color : '#0B0C0C',
+		$colors['_border'] = [
+			'slug'  => 'border',
+			'title' => esc_html__('Border', 'roavio'),
+			'value' => ! empty($border_color) ? $border_color : '#C9C9C9',
 		];
 
-		$colors['_gray'] = [
-			'slug'  => 'roavio-gray-color',
-			'title' => esc_html__('Gray', 'roavio'),
-			'value' => ! empty($gray_color) ? $gray_color : '#F3F6F9',
+		$colors['_bg'] = [
+			'slug'  => 'bg',
+			'title' => esc_html__('Background', 'roavio'),
+			'value' => ! empty($bg_color) ? $bg_color : '#F7F7F7',
 		];
 
-		$colors['_light'] = [
-			'slug'  => 'roavio-light-neutral',
-			'title' => esc_html__('Light', 'roavio'),
-			'value' => ! empty($light_neutral) ? $light_neutral : '#F3F6F9',
+		$colors['_bg_2'] = [
+			'slug'  => 'bg-2',
+			'title' => esc_html__('Background 2', 'roavio'),
+			'value' => ! empty($bg_2_color) ? $bg_2_color : '#EDF2DE',
+		];
+
+		$colors['_black'] = [
+			'slug'  => 'black',
+			'title' => esc_html__('Black', 'roavio'),
+			'value' => ! empty($black_color) ? $black_color : '#000',
+		];
+
+		$colors['_white'] = [
+			'slug'  => 'white',
+			'title' => esc_html__('White', 'roavio'),
+			'value' => ! empty($white_color) ? $white_color : '#fff',
 		];
 
 		return $colors;

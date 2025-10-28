@@ -129,7 +129,7 @@ $show_post_meta = Helper::get_option('blog_details_meta', 'yes');
 
 $breadcrumb_image      = Helper::get_option('breadcrumb_image');
 
-if (is_404() || (is_tax('ba_location'))) {
+if (is_404() || (is_tax('ba_location')) || is_singular('to_book')) {
 	return;
 }
 ?>
