@@ -107,7 +107,7 @@ class Roavio_Setup
 				'name'          => esc_html__('Primary Sidebar', 'roavio'),
 				'id'            => 'primary_sidebar',
 				'description'   => esc_html__('Add widgets here.', 'roavio'),
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'before_widget' => '<div id="%1$s" class="widget %2$s ">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',

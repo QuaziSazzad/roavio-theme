@@ -2302,3 +2302,25 @@ ul.list{
     margin-right: 14px !important;
 }
 
+.cart-section .common-table tbody tr td{
+  border:none;
+}
+
+.cart-section .common-table tbody tr td {
+    border: none;
+    margin-left: 0;
+}
+
+.fa-times.roavio{
+    margin-top: 20px;
+}
+
+.wp-block-search__inside-wrapper {
+    display: flex;
+}
+
+.main-sideber .single-sideber-widget .recent-post-area .recent-items .recent-thumb img {
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 100%;
+}

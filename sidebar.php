@@ -19,7 +19,7 @@ if (Helper::content_sidebar() == 'left-sidebar') {
 }
 ?>
 <div class="col-lg-4 col-md-8 col-sm-10  rmt-65 <?php echo esc_attr($roavio_sidebar_class); ?>">
-  <div class="blog-sidebar">
+  <div class="blog-sidebar main-sideber sticky-style">
     <div class="sidebar-area">
       <div class="primary-sidebar widget-area">
         <?php dynamic_sidebar('primary_sidebar'); ?>
