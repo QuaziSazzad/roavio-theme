@@ -1421,6 +1421,17 @@ p.logged-in-as {
 
 /* end unit test */
 
+.wp-comment-cookies-consent{
+    display: inline-block;
+    max-width: 30px;
+}
+
+
+
+.far {
+    font-family: "Font Awesome 5 Pro" !important;
+}
+
 .roavio-boxed-layout .roavio-body-content {
     margin: 0 auto;
     max-width: var(--roavio-boxed-width) !important;

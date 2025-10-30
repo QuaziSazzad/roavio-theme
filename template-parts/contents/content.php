@@ -31,7 +31,7 @@ if (! has_post_thumbnail()) {
 		<?php if (has_post_thumbnail()) : ?>
 			<div class="news-image">
 				<?php Roavio_Post_Helper::render_media(); ?>
-				<span><?php the_date(); ?></span>
+				<span><?php echo esc_html(get_the_date()); ?></span>
 			</div>
 		<?php endif; ?>
 		<div class="news-content">
