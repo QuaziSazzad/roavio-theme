@@ -1740,7 +1740,7 @@ select,
 textarea,
 .nice-select,
 .form-control {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   font-weight: 500;
   border-radius: 0;
@@ -2334,4 +2334,43 @@ ul.list{
     border-radius: 10px;
     min-width: 100px;
     min-height: 100%;
+}
+
+input.w-100.single-select::placeholder {
+    color:rgba(255, 255, 255, 0.65);
+}
+
+.tour-place-item-2 .tour-place-content .tour-list{
+    gap: 20px;
+}
+
+.testimonial-box-wrapper.style-2 .testimonial-card-item-3 {
+    justify-content: end;
+}
+
+ .currency_amount{
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+.tour-details-content .comment-reply-link{
+    display: none;
+}
+
+.tour-details-content .news-details-post p.comment-form-rating{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.tour-details-content span.comment-total-rating-stars.stars {
+    display: block;
+    width: 100%;
+}
+
+.tour-details-content span.comment-total-rating-value{
+    display: none !important;
+}
+
+.contact-us-wrapper-3 .contact-box .form-clt span.wpcf7-form-control-wrap{
+    display: block;
 }

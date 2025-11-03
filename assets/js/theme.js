@@ -82,9 +82,9 @@
 
         $windowOn.on("scroll", function () {
             if ($(this).scrollTop() > 250) {
-            $("#header-sticky").addClass("sticky");
+            $("#header-sticky").addClass("sticky-header");
             } else {
-            $("#header-sticky").removeClass("sticky");
+            $("#header-sticky").removeClass("sticky-header");
             }
         }); 
 
