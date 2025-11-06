@@ -118,7 +118,6 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  text-transform: capitalize;
 }
 
 ul {
@@ -153,7 +152,6 @@ h6 {
   padding: 0;
   color: var(--header);
   transition: all 0.4s ease-in-out;
-  text-transform: capitalize;
 }
 
 h1 {
@@ -477,6 +475,7 @@ span {
   background-color: rgba(255, 255, 255, 0.3);
   transform: translate(-50%, -50%) rotate(-45deg);
   content: "";
+  border-radius: 16px;
   z-index: 1;
 }
 .about-wrapper-2 .about-content .about-item .about-image:hover img {
@@ -584,6 +583,7 @@ span {
   transform: translate(-50%, -50%) rotate(-45deg);
   content: "";
   z-index: 1;
+  border-radius: 16px;
 }
 .about-wrapper-2 .about-image-item .about-image-2:hover img {
   -webkit-transform: scale3d(1.1, 1.1, 1);
@@ -680,6 +680,7 @@ span {
   transform: translate(-50%, -50%) rotate(-45deg);
   content: "";
   z-index: 1;
+  border-radius: 10px;
 }
 .about-wrapper-3 .about-content .about-left-item .left-image:hover img {
   -webkit-transform: scale3d(1.1, 1.1, 1);
@@ -876,6 +877,7 @@ span {
   transform: translate(-50%, -50%) rotate(-45deg);
   content: "";
   z-index: 1;
+  border-radius: 10px;
 }
 .about-wrapper-3 .about-right-item .right-image:hover img {
   -webkit-transform: scale3d(1.1, 1.1, 1);
@@ -1944,6 +1946,7 @@ span {
   margin-top: -100px;
   overflow: hidden;
   position: relative;
+  border-radius: 10px;
 }
 @media (max-width: 1399px) {
   .contact-wrapper .contact-image {
@@ -2486,6 +2489,8 @@ span {
 }
 .cta-contact-wrapper .cta-image {
   margin-left: -322px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 @media (max-width: 1399px) {
   .cta-contact-wrapper .cta-image {
@@ -2495,6 +2500,7 @@ span {
 .cta-contact-wrapper .cta-image img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 .cta-contact-wrapper .cta-right-content {
   margin-left: 90px;
@@ -3198,6 +3204,7 @@ span {
   transform: translate(-50%, -50%) rotate(-45deg);
   content: "";
   z-index: 1;
+  border-radius: 16px;
 }
 .commitment-wrapper .commitment-content .commitment-left .commitment-image:hover img {
   -webkit-transform: scale3d(1.1, 1.1, 1);
@@ -3333,6 +3340,7 @@ span {
   transform: translate(-50%, -50%) rotate(-45deg);
   content: "";
   z-index: 1;
+  border-radius: 16px;
 }
 .commitment-wrapper .commitment-image-item .commitment-image:hover img {
   -webkit-transform: scale3d(1.1, 1.1, 1);
@@ -5582,11 +5590,19 @@ span {
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 100px;
+  margin-bottom: 230px;
+}
+.footer-bottom.style-1 {
+  margin-bottom: 110px;
+}
+@media (max-width: 1399px) {
+  .footer-bottom.style-1 {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 1399px) {
   .footer-bottom {
-    margin-bottom: 30px;
+    margin-bottom: 110px;
   }
 }
 .footer-bottom .footer-wrapper {
@@ -6193,6 +6209,8 @@ span {
 
 .header-top-section {
   background-color: var(--header);
+  position: relative;
+  z-index: 999;
 }
 .header-top-section .container-fluid {
   padding: 0 70px;
@@ -6500,7 +6518,7 @@ span {
   padding: 30px 30px 10px 30px;
 }
 .header-main .main-menu ul li .has-homemenu.style-two {
-  left: -350px;
+  left: -520px;
 }
 .header-main .main-menu ul li .has-homemenu .homemenu-items {
   display: flex;
@@ -6656,6 +6674,10 @@ span {
 .header-main .header-right .sidebar__toggle {
   color: var(--header);
 }
+.header-main.style-3 {
+  position: relative;
+  z-index: 9999;
+}
 .header-main.style-3 .main-menu ul li a:hover {
   color: var(--theme-2) !important;
 }
@@ -6686,6 +6708,8 @@ span {
 
 .header-1 {
   background-color: var(--white);
+  position: relative;
+  z-index: 9999;
 }
 .header-1 .container-fluid {
   padding: 0 70px;
@@ -7106,6 +7130,17 @@ span {
 }
 .breadcrumb-wrapper {
   border-top: 1px solid rgba(21, 21, 21, 0.1);
+  margin-top: 134px;
+}
+@media (max-width: 1399px) {
+  .breadcrumb-wrapper {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .breadcrumb-wrapper {
+    margin-top: 60px;
+  }
 }
 .breadcrumb-wrapper .page-heading {
   padding: 100px 0 70px;
@@ -7253,6 +7288,17 @@ span {
   position: relative;
   border-radius: 10px;
   margin: 0 15px;
+  margin-top: 134px;
+}
+@media (max-width: 1399px) {
+  .breadcrumb-wrapper-2 {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .breadcrumb-wrapper-2 {
+    margin-top: 60px;
+  }
 }
 .breadcrumb-wrapper-2::before {
   position: absolute;
@@ -7449,6 +7495,17 @@ span {
   position: relative;
   border-radius: 10px;
   margin: 0 15px;
+  margin-top: 134px;
+}
+@media (max-width: 1399px) {
+  .breadcrumb-wrapper-3 {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .breadcrumb-wrapper-3 {
+    margin-top: 60px;
+  }
 }
 .breadcrumb-wrapper-3::before {
   position: absolute;
@@ -7577,6 +7634,17 @@ span {
   position: relative;
   border-radius: 10px;
   margin: 0 15px;
+  margin-top: 134px;
+}
+@media (max-width: 1399px) {
+  .breadcrumb-wrapper-4 {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .breadcrumb-wrapper-4 {
+    margin-top: 60px;
+  }
 }
 .breadcrumb-wrapper-4::before {
   position: absolute;
@@ -7768,6 +7836,12 @@ span {
 
 .error-section {
   position: relative;
+  margin-top: 100px;
+}
+@media (max-width: 991px) {
+  .error-section {
+    margin-top: 80px;
+  }
 }
 .error-section .text {
   font-size: 200px;
@@ -8429,17 +8503,20 @@ span {
 .hero-1 {
   position: relative;
   padding: 250px 0 70px;
-  border-radius: 10px;
+  border-radius: 10px !important;
   z-index: 9;
+  transition: all 0.4s ease-in-out;
 }
 @media (max-width: 1399px) {
   .hero-1 {
-    padding: 100px 0 70px;
+    padding: 130px 0 70px;
+    margin-top: 0px;
   }
 }
 @media (max-width: 991px) {
   .hero-1 {
-    padding: 80px 0 70px;
+    padding: 130px 0 70px;
+    margin-top: 0px;
   }
 }
 .hero-1 .container-fluid {
@@ -8507,6 +8584,8 @@ span {
 }
 .hero-1 .hero-bg {
   position: absolute;
+  overflow: hidden;
+  border-radius: 10px !important;
   top: 0;
   left: 0;
   height: 100%;
@@ -8531,7 +8610,7 @@ span {
   width: 100%;
   height: 100%;
   content: "";
-  border-radius: 10px;
+  border-radius: 10px !important;
   background: linear-gradient(180deg, rgba(21, 21, 21, 0) 0%, rgba(21, 21, 21, 0.7) 100%);
   z-index: -1;
 }
@@ -8539,7 +8618,19 @@ span {
 .hero-section-1 {
   position: relative;
   margin: 0 20px;
-  border-radius: 10px;
+  border-radius: 10px !important;
+  overflow: hidden;
+  margin-top: 135px;
+}
+@media (max-width: 1399px) {
+  .hero-section-1 {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .hero-section-1 {
+    margin-top: 60px;
+  }
 }
 .hero-section-1 .swiper-dot-3 {
   position: absolute;
@@ -8752,6 +8843,14 @@ span {
   transform: scale(1.19);
 }
 
+.hero-3 {
+  margin-top: 134px;
+}
+@media (max-width: 1399px) {
+  .hero-3 {
+    margin-top: 60px;
+  }
+}
 .hero-3 .hero-image {
   position: relative;
   height: 750px;
@@ -8983,6 +9082,7 @@ span {
 .hero-4 .hero-image {
   position: relative;
   height: 560px;
+  border-radius: 10px;
 }
 @media (max-width: 1399px) {
   .hero-4 .hero-image {
@@ -10626,14 +10726,12 @@ span {
   margin-left: 6px;
 }
 .section-title h2 span {
-  text-transform: uppercase;
   color: var(--theme);
   border-bottom: 4px solid var(--theme);
   font-weight: 600;
 }
 .section-title h2 b {
   color: var(--theme);
-  text-transform: uppercase;
   font-weight: 600;
 }
 .section-title h2 b.color {
@@ -12817,6 +12915,10 @@ span {
   width: 100%;
   height: 100%;
   border-radius: 16px;
+}
+.tour-dedicated-wrapper .tour-image {
+  overflow: hidden;
+  border-radius: 10px;
 }
 .tour-dedicated-wrapper .tour-image img {
   width: 100%;
@@ -15522,6 +15624,11 @@ span {
   color: var(--theme);
   margin-bottom: 30px;
 }
+.travel-box-items-4 .icon i {
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+  display: inline-block;
+}
 .travel-box-items-4 h5 a {
   background-position: 0 95%;
   background-repeat: no-repeat;
@@ -15545,6 +15652,10 @@ span {
   transform: translateY(-10px);
   background-color: #FEF8EF;
   border: 1px solid rgba(21, 21, 21, 0.07);
+}
+.travel-box-items-4:hover .icon i {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
 
 .destination-section-4 {

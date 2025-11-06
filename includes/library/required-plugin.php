@@ -18,14 +18,12 @@ function roavio_register_required_plugins()
 			'name'     => esc_html__('Elementor Website Builder', 'roavio'),
 			'slug'     => 'elementor',
 			'required' => true,
-			'version'  => '3.12',
 		],
 		[
 			'name'     => esc_html__('Roavio Toolkit', 'roavio'),
 			'slug'     => 'roavio-toolkit',
 			'source'   => 'https://wp.webtend.net/roavio/tf-data/roavio-toolkit.zip',
 			'required' => true,
-			'version'  => '1.0.0',
 		],
 		[
 			'name'     => esc_html__('Contact Form 7', 'roavio'),

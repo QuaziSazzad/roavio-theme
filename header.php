@@ -29,19 +29,23 @@ use RoavioTheme\Classes\Roavio_Helper as Helper;
 	<!-- MouseCursor Start -->
 	<div class="mouseCursor cursor-outer"></div>
 	<div class="mouseCursor cursor-inner"></div>
+
+	<?php
+	if ('enabled' === Helper::get_option('site_preloader', 'enabled')) {
+		get_template_part('template-parts/preloader');
+	}
+
+	if (class_exists('Roavio_Toolkit')) {
+		do_action("roavio_builder_before_main");
+	}
+
+	if ('enabled' === Helper::check_default_header()) {
+		get_template_part('template-parts/header/header', 'default');
+	}
+	?>
 	<div id="roavio-page" class="roavio-body-content">
-		<?php
-		if ('enabled' === Helper::get_option('site_preloader', 'enabled')) {
-			get_template_part('template-parts/preloader');
-		}
+		<div id="smooth-wrapper">
+			<div id="smooth-content">
 
-		if (class_exists('Roavio_Toolkit')) {
-			do_action("roavio_builder_before_main");
-		}
-
-		if ('enabled' === Helper::check_default_header()) {
-			get_template_part('template-parts/header/header', 'default');
-		}
-		?>
-		<main id="roavio-content" class="roavio-content-area">
-			<?php get_template_part('template-parts/page-title'); ?>
+				<main id="roavio-content" class="roavio-content-area">
+					<?php get_template_part('template-parts/page-title'); ?>

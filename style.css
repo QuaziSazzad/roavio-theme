@@ -2559,3 +2559,9 @@ input.w-100.single-select::placeholder {
  #edit_user_profile .input_group > div input:focus {
     color: var(--black, #1c231f);
 }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 110px;
+}
