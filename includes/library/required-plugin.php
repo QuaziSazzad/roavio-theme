@@ -31,8 +31,8 @@ function roavio_register_required_plugins()
 			'required' => false,
 		],
 		[
-			'name'     => esc_html__('Breadcrumb NavXT', 'roavio'),
-			'slug'     => 'breadcrumb-navxt',
+			'name'     => esc_html__('Booking Plugin', 'roavio'),
+			'slug'     => 'ba-book-everything',
 			'required' => false,
 		],
 		[

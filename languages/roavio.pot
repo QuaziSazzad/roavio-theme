@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Roavio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-03 09:22+0000\n"
+"POT-Creation-Date: 2025-11-08 00:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,37 +13,33 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.8.0; wp-6.8.1; php-8.2.23\n"
+"X-Loco-Version: 2.8.0; wp-6.8.3; php-8.2.23\n"
 "X-Domain: roavio"
 
-#: includes/admin/templates/server-status.php:114
+#: includes/admin/templates/server-status.php:116
 msgid " - We recommend a minimum PHP version of "
 msgstr ""
 
-#: includes/admin/templates/server-status.php:213
+#: includes/admin/templates/server-status.php:215
 msgid " - We recommend minimum value: 128 MB."
 msgstr ""
 
-#: includes/admin/templates/server-status.php:143
-#: includes/admin/templates/server-status.php:165
-#: includes/admin/templates/server-status.php:187
+#: includes/admin/templates/server-status.php:145
+#: includes/admin/templates/server-status.php:167
+#: includes/admin/templates/server-status.php:189
 msgid " - We recommend setting max execution time to at least "
 msgstr ""
 
-#: includes/admin/templates/server-status.php:48
+#: includes/admin/templates/server-status.php:50
 msgid " - We recommend setting memory to be at least 128MB"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:68
+#: includes/admin/templates/server-status.php:70
 msgid " How to disable WP_DEBUG mode."
 msgstr ""
 
-#: comments.php:66
+#: comments.php:67
 msgid " Submit Comment"
-msgstr ""
-
-#: 404.php:15
-msgid "\"Oops! It looks like something went wrong.\""
 msgstr ""
 
 #: includes/admin/templates/welcome.php:45
@@ -63,7 +59,11 @@ msgstr ""
 msgid "404"
 msgstr ""
 
-#: 404.php:28
+#: 404.php:15
+msgid "404 (page not found)"
+msgstr ""
+
+#: 404.php:32
 msgid "404 Error"
 msgstr ""
 
@@ -104,8 +104,20 @@ msgid "Articles by "
 msgstr ""
 
 #: includes/classes/class-post-helper.php:67
-#: includes/admin/templates/server-status.php:94
+#: includes/admin/templates/server-status.php:96
 msgid "Author"
+msgstr ""
+
+#: includes/classes/class-helper.php:297 includes/classes/class-helper.php:377
+msgid "Background"
+msgstr ""
+
+#: includes/classes/class-helper.php:303 includes/classes/class-helper.php:383
+msgid "Background 2"
+msgstr ""
+
+#: includes/classes/class-helper.php:309 includes/classes/class-helper.php:389
+msgid "Black"
 msgstr ""
 
 #: functions.php:60
@@ -117,24 +129,16 @@ msgctxt "Block pattern description"
 msgid "This is my first block pattern"
 msgstr ""
 
-#: includes/classes/class-helper.php:268
-msgid "Blue"
-msgstr ""
-
-#: includes/classes/class-helper.php:334
-msgid "blue"
-msgstr ""
-
 #: functions.php:48
 msgid "Blue Quote"
 msgstr ""
 
-#: includes/classes/class-helper.php:274 includes/classes/class-helper.php:340
-msgid "Body"
+#: template-parts/header/header-button.php:14
+msgid "Book Now"
 msgstr ""
 
-#: includes/library/required-plugin.php:36
-msgid "Breadcrumb NavXT"
+#: includes/classes/class-helper.php:291 includes/classes/class-helper.php:371
+msgid "Border"
 msgstr ""
 
 #: includes/admin/templates/welcome.php:55
@@ -152,23 +156,23 @@ msgstr ""
 msgid "Comments "
 msgstr ""
 
-#: comments.php:28
+#: comments.php:29
 msgid "Comments (%)"
 msgstr ""
 
-#: comments.php:26
+#: comments.php:27
 msgid "Comments (0)"
 msgstr ""
 
-#: comments.php:27
+#: comments.php:28
 msgid "Comments (1)"
 msgstr ""
 
-#: comments.php:47
+#: comments.php:48
 msgid "Comments are closed."
 msgstr ""
 
-#: includes/library/required-plugin.php:31
+#: includes/library/required-plugin.php:29
 msgid "Contact Form 7"
 msgstr ""
 
@@ -186,7 +190,7 @@ msgstr ""
 msgid "Deactivate Theme"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:72
+#: includes/admin/templates/server-status.php:74
 msgid "Disabled."
 msgstr ""
 
@@ -200,11 +204,11 @@ msgstr ""
 msgid "Elementor Website Builder"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:234
+#: includes/admin/templates/server-status.php:236
 msgid "Enabled"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:65
+#: includes/admin/templates/server-status.php:67
 msgid "Enabled."
 msgstr ""
 
@@ -216,10 +220,6 @@ msgstr ""
 msgid "Error 404"
 msgstr ""
 
-#: template-parts/header/header-button.php:14
-msgid "Get In Touch"
-msgstr ""
-
 #: template-parts/contents/content-none.php:19
 msgid "Get started here"
 msgstr ""
@@ -228,21 +228,12 @@ msgstr ""
 msgid "Get Support"
 msgstr ""
 
-#: 404.php:17
+#: 404.php:18
 msgid "Go to Home"
 msgstr ""
 
-#: includes/classes/class-helper.php:286 includes/classes/class-helper.php:352
-msgid "Gray"
-msgstr ""
-
-#: includes/classes/class-assets.php:52
-msgctxt "Hanken Grotesk"
-msgid "on"
-msgstr ""
-
-#: includes/classes/class-helper.php:280 includes/classes/class-helper.php:346
-msgid "Headline"
+#: includes/classes/class-helper.php:279 includes/classes/class-helper.php:359
+msgid "Header"
 msgstr ""
 
 #: includes/admin/class-admin-panel.php:61
@@ -254,11 +245,11 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:25
+#: includes/admin/templates/server-status.php:27
 msgid "Home URL"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:53
+#: includes/admin/templates/server-status.php:55
 msgid "How to change memory settings."
 msgstr ""
 
@@ -270,7 +261,7 @@ msgstr ""
 msgid "https://wp.webtend.net/roavio"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:130
+#: includes/admin/templates/server-status.php:132
 msgid "If you want to change this setting please read this guide"
 msgstr ""
 
@@ -282,8 +273,13 @@ msgstr ""
 msgid "Install Required and recommended plugins."
 msgstr ""
 
-#: includes/classes/class-assets.php:46 includes/classes/class-assets.php:76
+#: includes/classes/class-assets.php:73
 msgctxt "Inter"
+msgid "on"
+msgstr ""
+
+#: includes/classes/class-assets.php:47
+msgctxt "Inter Tight font: on or off"
 msgid "on"
 msgstr ""
 
@@ -297,12 +293,12 @@ msgstr ""
 msgid "Just complete the steps below:"
 msgstr ""
 
-#: searchform.php:16
+#: searchform.php:16 template-parts/header/header-button.php:25
 msgctxt "label"
 msgid "Enter your keyword"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:37
+#: includes/admin/templates/server-status.php:39
 msgid "Language"
 msgstr ""
 
@@ -310,31 +306,27 @@ msgstr ""
 msgid "Latest News"
 msgstr ""
 
-#: comments.php:61
+#: comments.php:62
 msgid "Leave a Comment"
-msgstr ""
-
-#: includes/classes/class-helper.php:292 includes/classes/class-helper.php:358
-msgid "Light"
 msgstr ""
 
 #: maintenance.php:22
 msgid "Maintenance Mode"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:136
+#: includes/admin/templates/server-status.php:138
 msgid "Max Execution Time"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:206
+#: includes/admin/templates/server-status.php:208
 msgid "Max upload size"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:41
+#: includes/admin/templates/server-status.php:43
 msgid "Memory Limit"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:202
+#: includes/admin/templates/server-status.php:204
 msgid "MySql Version"
 msgstr ""
 
@@ -346,7 +338,7 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: includes/library/required-plugin.php:41
+#: includes/library/required-plugin.php:34
 msgid "One Click Demo Import"
 msgstr ""
 
@@ -359,11 +351,11 @@ msgid "Page"
 msgstr ""
 
 #: template-parts/contents/content-page.php:18
-#: template-parts/contents/content-single.php:37
+#: template-parts/contents/content-single.php:39
 msgid "Pages:"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:89
+#: includes/admin/templates/server-status.php:91
 msgid "Parent Theme Version"
 msgstr ""
 
@@ -371,19 +363,19 @@ msgstr ""
 msgid "Parent Theme Version - "
 msgstr ""
 
-#: includes/admin/templates/server-status.php:158
+#: includes/admin/templates/server-status.php:160
 msgid "PHP Max Input Time"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:180
+#: includes/admin/templates/server-status.php:182
 msgid "PHP Max Input Vars"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:107
+#: includes/admin/templates/server-status.php:109
 msgid "PHP Version"
 msgstr ""
 
-#: searchform.php:13
+#: searchform.php:13 template-parts/header/header-button.php:25
 msgctxt "placeholder"
 msgid "Search.."
 msgstr ""
@@ -404,16 +396,16 @@ msgstr ""
 msgid "Please wait.."
 msgstr ""
 
-#: includes/admin/templates/server-status.php:124
+#: includes/admin/templates/server-status.php:126
 msgid "Post Max Size"
+msgstr ""
+
+#: template-parts/contents/content-single.php:60
+msgid "Posted in:"
 msgstr ""
 
 #: includes/classes/class-breadcrumb.php:67
 msgid "Posts tagged &#39;"
-msgstr ""
-
-#: includes/classes/class-helper.php:256 includes/classes/class-helper.php:322
-msgid "Primary"
 msgstr ""
 
 #: includes/classes/class-setup.php:121
@@ -444,13 +436,22 @@ msgstr ""
 msgid "Ready to publish your first post?."
 msgstr ""
 
-#: includes/classes/class-comment-walker.php:82
+#: includes/classes/class-comment-walker.php:84
 msgid "Reply "
 msgstr ""
 
-#: includes/library/required-plugin.php:59
-#: includes/library/required-plugin.php:60
+#: includes/library/required-plugin.php:52
+#: includes/library/required-plugin.php:53
 msgid "Required Plugins"
+msgstr ""
+
+#. Name of the theme
+#: template-parts/header/header-default.php:15
+msgid "Roavio"
+msgstr ""
+
+#: includes/library/required-plugin.php:23
+msgid "Roavio Toolkit"
 msgstr ""
 
 #: includes/admin/templates/welcome.php:24
@@ -465,10 +466,6 @@ msgstr ""
 msgid "Search Results for: "
 msgstr ""
 
-#: includes/classes/class-helper.php:262 includes/classes/class-helper.php:328
-msgid "Secondary"
-msgstr ""
-
 #: includes/admin/templates/theme-activation.php:80
 msgid "Select & Copy item Purchase code."
 msgstr ""
@@ -477,7 +474,7 @@ msgstr ""
 msgid "Select License  Certificate & Purchase code."
 msgstr ""
 
-#: includes/admin/templates/server-status.php:104
+#: includes/admin/templates/server-status.php:106
 msgid "Server Setting"
 msgstr ""
 
@@ -486,22 +483,31 @@ msgstr ""
 msgid "Server Status"
 msgstr ""
 
-#: template-parts/contents/content-single.php:54
+#: template-parts/contents/content-single.php:72
 msgid "Share:"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:227
+#: includes/admin/templates/server-status.php:229
 msgid "SimpleXML"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:29
+#: includes/admin/templates/server-status.php:31
 msgid "Site Url"
+msgstr ""
+
+#: 404.php:16
+msgid "Sorry! page can’t be found"
 msgstr ""
 
 #: template-parts/contents/content-none.php:24
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
+msgstr ""
+
+#: 404.php:17
+msgid ""
+"Sorry, the page you’re looking for doesn’t exist or may have been moved."
 msgstr ""
 
 #: includes/admin/templates/welcome.php:52
@@ -516,17 +522,12 @@ msgstr ""
 msgid "Step 3"
 msgstr ""
 
-#: template-parts/contents/content-single.php:47
+#: template-parts/contents/content-single.php:49
 msgid "Tags:"
 msgstr ""
 
-#. Name of the theme
-#: template-parts/header/header-default.php:15
-msgid "Roavio"
-msgstr ""
-
-#: includes/library/required-plugin.php:24
-msgid "Roavio Toolkit"
+#: includes/classes/class-helper.php:285 includes/classes/class-helper.php:365
+msgid "Text"
 msgstr ""
 
 #: includes/admin/templates/theme-activation.php:47
@@ -537,38 +538,42 @@ msgstr ""
 msgid "Thanks For Purchasing"
 msgstr ""
 
-#: 404.php:16
-msgid "The page you are looking for does not exist or has been moved"
-msgstr ""
-
 #: maintenance.php:14
 msgid "The site is currently down for maintenance"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:77
+#: includes/classes/class-helper.php:267 includes/classes/class-helper.php:347
+msgid "Theme"
+msgstr ""
+
+#: includes/classes/class-helper.php:273 includes/classes/class-helper.php:353
+msgid "Theme 2"
+msgstr ""
+
+#: includes/admin/templates/server-status.php:79
 msgid "Theme Config"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:80
+#: includes/admin/templates/server-status.php:82
 msgid "Theme Name"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:231
+#: includes/admin/templates/server-status.php:233
 msgid ""
 "To ensure successful installation of demo content The SimpleXML extension "
 "should be installed on your web server. Please contact your hosting provider "
 "to install and activate SimpleXML extension."
 msgstr ""
 
-#: includes/admin/templates/server-status.php:149
-#: includes/admin/templates/server-status.php:171
-#: includes/admin/templates/server-status.php:193
-#: includes/admin/templates/server-status.php:218
+#: includes/admin/templates/server-status.php:151
+#: includes/admin/templates/server-status.php:173
+#: includes/admin/templates/server-status.php:195
+#: includes/admin/templates/server-status.php:220
 msgid "To see how you can change this please read this guide"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:33
-#: includes/admin/templates/server-status.php:84
+#: includes/admin/templates/server-status.php:35
+#: includes/admin/templates/server-status.php:86
 msgid "Version"
 msgstr ""
 
@@ -576,8 +581,7 @@ msgstr ""
 msgid "Version - "
 msgstr ""
 
-#: template-parts/contents/content.php:54
-#: template-parts/contents/content.php:55
+#: template-parts/contents/content.php:56
 msgid "View Product"
 msgstr ""
 
@@ -611,15 +615,19 @@ msgstr ""
 msgid "Where Can I Find My Purchase Code?"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:22
+#: includes/classes/class-helper.php:315 includes/classes/class-helper.php:395
+msgid "White"
+msgstr ""
+
+#: includes/admin/templates/server-status.php:24
 msgid "WordPress Setting"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:65
 msgid "Write Comment"
 msgstr ""
 
-#: includes/admin/templates/server-status.php:128
+#: includes/admin/templates/server-status.php:130
 msgid ""
 "You cannot upload images, themes, and plugins that have a size bigger than "
 "this value."
@@ -629,7 +637,7 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: comments.php:55
+#: comments.php:56
 msgid "Your Email"
 msgstr ""
 
@@ -641,7 +649,7 @@ msgstr ""
 msgid "Your Envato Username"
 msgstr ""
 
-#: comments.php:54
+#: comments.php:55
 msgid "Your Name"
 msgstr ""
 

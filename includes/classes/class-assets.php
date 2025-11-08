@@ -39,20 +39,23 @@ class Roavio_Assets
 		$fonts_url     = '';
 		$font_families = [];
 
-		$primary_font   = Roavio_Helper::get_option('primary_font', ['font-family' => '']);
+		// Get primary font from theme options
+		$primary_font = Roavio_Helper::get_option('primary_font', ['font-family' => '']);
 
+		// Use default Inter Tight font if no custom font is set
 		if ('' === $primary_font || (is_array($primary_font) && empty($primary_font['font-family']))) {
-			if ('off' !== _x('on', 'Inter Tight', 'roavio')) {
-				$font_families[] = 'Inter+Tight:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i';
+			if ('off' !== _x('on', 'Inter Tight font: on or off', 'roavio')) {
+				$font_families[] = 'Inter+Tight:ital,wght@0,100..900;1,100..900';
 			}
 		}
 
-
+		// Build Google Fonts URL if fonts are available
 		if (!empty($font_families)) {
-			// Build Google Fonts /css2 URL
-			$query_args = array_map(function ($family) {
-				return 'family=' . urlencode($family);
-			}, $font_families);
+			$query_args = [];
+
+			foreach ($font_families as $family) {
+				$query_args[] = 'family=' . $family;
+			}
 
 			$query_args[] = 'display=swap';
 
