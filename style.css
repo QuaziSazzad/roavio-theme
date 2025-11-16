@@ -2565,3 +2565,7 @@ input.w-100.single-select::placeholder {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 110px;
 }
+
+.contact-wrapper-4 .contact-content .form-clt span {
+    width: 100%;
+}
