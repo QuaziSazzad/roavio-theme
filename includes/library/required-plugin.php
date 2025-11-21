@@ -36,6 +36,11 @@ function roavio_register_required_plugins()
 			'required' => false,
 		],
 		[
+			'name'     => esc_html__('WooCommerce', 'roavio'),
+			'slug'     => 'woocommerce',
+			'required' => false,
+		],
+		[
 			'name'     => esc_html__('One Click Demo Import', 'roavio'),
 			'slug'     => 'one-click-demo-import',
 			'required' => false,

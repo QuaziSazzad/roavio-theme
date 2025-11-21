@@ -35,6 +35,7 @@ require_once ROAVIO_CLASSES . '/class-post-helper.php';
 require_once ROAVIO_CLASSES . '/class-comment-walker.php';
 require_once ROAVIO_CLASSES . '/class-nav-walker.php';
 require_once ROAVIO_CLASSES . '/class-breadcrumb.php';
+require_once ROAVIO_CLASSES . '/class-woocommerce.php';
 require_once ROAVIO_ADMIN . '/class-admin-panel.php';
 require_once ROAVIO_INCLUDES . '/library/class-tgm-plugin-activation.php';
 require_once ROAVIO_INCLUDES . '/library/required-plugin.php';
@@ -69,3 +70,16 @@ add_action('init', function () {
 
     add_action('init', 'roavio_register_my_patterns');
 });
+
+
+// Remove sidebar from WooCommerce pages
+function roavio_remove_woocommerce_sidebar()
+{
+    if (!function_exists('is_woocommerce') || !function_exists('is_cart') || !function_exists('is_checkout')) {
+        return;
+    }
+    if (is_woocommerce() || is_cart() || is_checkout()) {
+        remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+    }
+}
+add_action('wp', 'roavio_remove_woocommerce_sidebar');

@@ -42,6 +42,10 @@ use RoavioTheme\Classes\Roavio_Helper as Helper;
 	if ('enabled' === Helper::check_default_header()) {
 		get_template_part('template-parts/header/header', 'default');
 	}
+
+	if (class_exists('Woocommerce')) {
+		RoavioTheme\Classes\Roavio_Woocommerce::mini_cart_sidebar();
+	}
 	?>
 	<div id="roavio-page" class="roavio-body-content">
 		<div id="smooth-wrapper">
